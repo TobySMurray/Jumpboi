@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Levels/General Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=2]
+
+[node name="General Level" instance=ExtResource( 1 )]
+
+[node name="Player" parent="." index="0"]
+position = Vector2( -296, 200 )
+
+[node name="CollisionShape2D" parent="KillZone" index="0"]
+position = Vector2( -8, 272 )
+
+[node name="CollisionShape2D2" parent="KillZone" index="1"]
+position = Vector2( -496, -24 )
+
+[node name="CollisionShape2D3" parent="KillZone" index="2"]
+position = Vector2( 456, 16 )
+
+[node name="NextLevel" parent="." index="3"]
+position = Vector2( -248, -168 )
+next_world = "res://Levels/UnderAndOver.tscn"
+
+[node name="TileMap" parent="." index="5"]
+tile_data = PoolIntArray( -589840, 0, 196614, -589839, 0, 196616, -393224, 0, 196614, -393223, 0, 196615, -393222, 0, 196615, -393221, 0, 196616, -262125, 0, 196614, -262124, 0, 196616, -196606, 0, 196614, -196605, 0, 196615, -196604, 0, 196616, 8, 0, 196614, 9, 0, 196615, 10, 0, 196616, 262156, 0, 196614, 262157, 0, 196615, 262158, 0, 196615, 262159, 0, 196616, 458758, 0, 196614, 458759, 0, 196615, 458760, 0, 196616, 655351, 0, 196614, 655352, 0, 196615, 655353, 0, 196616, 655359, 0, 196614, 589824, 0, 196615, 589825, 0, 196616, 917485, 0, 0, 917486, 0, 1, 917487, 0, 1, 917488, 0, 1, 917489, 0, 2, 983021, 0, 65536, 983022, 0, 65537, 983023, 0, 65537, 983024, 0, 65537, 983025, 0, 65539, 1048557, 0, 65541, 1048558, 0, 65537, 1048559, 0, 65537, 1048560, 0, 65537, 1048561, 0, 65539, 1114093, 0, 65541, 1114094, 0, 65537, 1114095, 0, 65537, 1114096, 0, 65537, 1114097, 0, 65539, 1179629, 0, 65541, 1179630, 0, 65537, 1179631, 0, 65537, 1179632, 0, 65537, 1179633, 0, 65539, 1245165, 0, 65536, 1245166, 0, 65537, 1245167, 0, 65537, 1245168, 0, 65537, 1245169, 0, 65538, 1310701, 0, 65536, 1310702, 0, 65537, 1310703, 0, 65537, 1310704, 0, 65537, 1310705, 0, 65539, 1376237, 0, 65536, 1376238, 0, 65537, 1376239, 0, 65537, 1376240, 0, 65537, 1376241, 0, 65538, 1441773, 0, 131072, 1441774, 0, 131073, 1441775, 0, 131073, 1441776, 0, 131073, 1441777, 0, 131074 )
+
+[node name="Label" parent="." index="6"]
+visible = false
+margin_left = -301.0
+margin_top = 138.0
+margin_right = -129.0
+margin_bottom = 150.0
+text = "Use your jumps wisely!"
+
+[node name="Coin" parent="." index="7" instance=ExtResource( 2 )]
+position = Vector2( 320, -80 )
+
+[editable path="KillZone"]
