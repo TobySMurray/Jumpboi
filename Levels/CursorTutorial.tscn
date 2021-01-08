@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Levels/General Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Pixel.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://miscellaneous sprites/grass_props.png" type="Texture" id=4]
 
 [node name="General Level" instance=ExtResource( 1 )]
@@ -73,6 +73,8 @@ texture = ExtResource( 4 )
 [node name="grass_props2" type="Sprite" parent="." index="10"]
 position = Vector2( 160, 205 )
 texture = ExtResource( 4 )
+
+[editable path="Player"]
 
 [editable path="KillZone"]
 
