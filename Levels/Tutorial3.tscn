@@ -5,17 +5,19 @@
 [ext_resource path="res://Scenes/Fly.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=4]
 
-
 [node name="General Level" instance=ExtResource( 2 )]
 
 [node name="Player" parent="." index="0"]
 position = Vector2( -80, 136 )
 
+[node name="Sprite" parent="Player" index="1"]
+frame = 32
+
 [node name="KillZone" parent="." index="2"]
 position = Vector2( 8, 200 )
 
 [node name="CollisionShape2D2" parent="KillZone" index="1"]
-position = Vector2( -432, 0 )
+position = Vector2( -424, 0 )
 
 [node name="CollisionShape2D3" parent="KillZone" index="2"]
 position = Vector2( 432, 16 )

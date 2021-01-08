@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/General Level.tscn" type="PackedScene" id=2]
+
+[node name="General Level" instance=ExtResource( 2 )]
+
+[node name="Player" parent="." index="0"]
+position = Vector2( -112, 136 )
+
+[node name="CollisionShape2D" parent="KillZone" index="0"]
+position = Vector2( 0, 216 )
+
+[node name="CollisionShape2D2" parent="KillZone" index="1"]
+position = Vector2( -344, -16 )
+
+[node name="CollisionShape2D3" parent="KillZone" index="2"]
+position = Vector2( 368, 0 )
+
+[node name="NextLevel" parent="." index="3"]
+position = Vector2( 168, -128 )
+
+[node name="TileMap" parent="." index="5"]
+tile_data = PoolIntArray( -262147, 0, 196614, -262146, 0, 196615, -262145, 0, 196616, 196613, 0, 0, 196614, 0, 131076, 196615, 0, 1, 196616, 0, 2, 262149, 0, 131072, 262150, 0, 131073, 262151, 0, 4, 262152, 0, 131074, 393206, 0, 0, 393207, 0, 2, 458742, 0, 65541, 458743, 0, 65538, 524278, 0, 65536, 524279, 0, 65539, 589814, 0, 65541, 589815, 0, 65539, 655350, 0, 65536, 655351, 0, 131075, 655352, 0, 1, 655353, 0, 131076, 655354, 0, 1, 655355, 0, 1, 655356, 0, 131076, 655357, 0, 131076, 655358, 0, 131076, 655359, 0, 131076, 589824, 0, 1, 589825, 0, 131076, 589826, 0, 1, 589827, 0, 1, 589828, 0, 131076, 589829, 0, 1, 589830, 0, 1, 589831, 0, 1, 589832, 0, 131076, 589833, 0, 1, 589834, 0, 131076, 589835, 0, 131076, 589836, 0, 1, 589837, 0, 2, 720886, 0, 131072, 720887, 0, 4, 720888, 0, 4, 720889, 0, 4, 720890, 0, 4, 720891, 0, 131073, 720892, 0, 4, 720893, 0, 131073, 720894, 0, 131073, 720895, 0, 131073, 655360, 0, 4, 655361, 0, 131073, 655362, 0, 131073, 655363, 0, 131073, 655364, 0, 131073, 655365, 0, 4, 655366, 0, 4, 655367, 0, 4, 655368, 0, 4, 655369, 0, 4, 655370, 0, 4, 655371, 0, 131073, 655372, 0, 131073, 655373, 0, 131074 )
+
+[node name="Coin" parent="." index="8" instance=ExtResource( 1 )]
+position = Vector2( -56, 96 )
+
+[node name="Coin2" parent="." index="9" instance=ExtResource( 1 )]
+position = Vector2( 40, 96 )
+
+[node name="Coin3" parent="." index="10" instance=ExtResource( 1 )]
+position = Vector2( 88, 16 )
+
+[node name="Coin4" parent="." index="11" instance=ExtResource( 1 )]
+position = Vector2( 48, -48 )
+
+[node name="Coin5" parent="." index="12" instance=ExtResource( 1 )]
+position = Vector2( -144, 0 )
+
+[node name="Coin6" parent="." index="13" instance=ExtResource( 1 )]
+position = Vector2( -136, -64 )
+
+[editable path="Player"]
+
+[editable path="KillZone"]

@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="JumpBoi"
-run/main_scene="res://Scenes/StartMenu.tscn"
+run/main_scene="res://StartMenu.tscn"
 boot_splash/image="res://splash.PNG"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
@@ -74,6 +74,7 @@ pause={
 2d_physics/layer_4="PlayerHitbox"
 2d_physics/layer_5="EnemyHurtbox"
 2d_physics/layer_6="Enemy"
+2d_physics/layer_7="Coins"
 
 [rendering]
 

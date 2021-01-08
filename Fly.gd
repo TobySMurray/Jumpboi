@@ -9,7 +9,8 @@ func _ready():
 	animationPlayer.play("Idle")
 
 func _on_Hurtbox_area_entered(area):
-	health -= 1
+	if area.name == "Hitbox":
+		health -= 1
 	if health <= 0:
 		animationPlayer.play("Die")
 		yield(animationPlayer, "animation_finished")
