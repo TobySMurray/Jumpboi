@@ -7,7 +7,9 @@ export var deadzone = 25
 
 var velocity = Vector2()
 var gravity = 800
-var jump_velocity = 300
+var jump_velocity = 250
+
+var max_horiz_speed = 300
 
 var max_jumps = 2
 var jumps = 2
@@ -63,6 +65,10 @@ func _physics_process(delta):
 func move():
 	var move_direction = (get_global_mouse_position() - position)
 	velocity.x = lerp(velocity.x, move_speed * move_direction.x, 0.9)
+	if velocity.x >= 0:
+		velocity.x = min(velocity.x, max_horiz_speed)
+	else:
+		velocity.x = max(velocity.x, -max_horiz_speed)
 	
 	if abs(move_direction.x) < deadzone:
 		velocity.x = 0
@@ -76,9 +82,9 @@ func move():
 func jump_at_mouse():
 	#var direction = (get_global_mouse_position() - self.global_position).normalized()
 	velocity.y -= jump_velocity
-	if jumps == 1:
+	if !is_on_floor():
 		velocity.y = 0
-		velocity.y -= jump_velocity
+		velocity.y -= jump_velocity * 1.2
 	#if direction.y > -0.35:
 	#	velocity.y -= 200
 	jumpAudio.play()
@@ -111,7 +117,7 @@ func _on_Attack_animation_finished():
 	attack_anim.hide()
 
 func _on_Hitbox_area_entered(_area):
-	jumps = max_jumps
+	jumps += 1
 
 func _on_NextLevel_body_entered(body):
 	if body.name == "Player":

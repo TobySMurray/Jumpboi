@@ -83,7 +83,7 @@ margin_bottom = 107.0
 rect_scale = Vector2( 0.5, 0.5 )
 custom_fonts/font = ExtResource( 1 )
 text = "Killing a fly 
-resets both jumps"
+gives you a jumps"
 align = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -91,6 +91,8 @@ __meta__ = {
 
 [node name="Coin" parent="." index="15" instance=ExtResource( 4 )]
 position = Vector2( 216, -176 )
+
+[editable path="Player"]
 
 [editable path="KillZone"]
 
