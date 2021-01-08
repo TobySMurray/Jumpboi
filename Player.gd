@@ -76,9 +76,9 @@ func move():
 func jump_at_mouse():
 	#var direction = (get_global_mouse_position() - self.global_position).normalized()
 	velocity.y -= jump_velocity
-	#if jumps == 1:
-	#	velocity.y = 0
-	#	velocity = direction * jump_velocity
+	if jumps == 1:
+		velocity.y = 0
+		velocity.y -= jump_velocity
 	#if direction.y > -0.35:
 	#	velocity.y -= 200
 	jumpAudio.play()
