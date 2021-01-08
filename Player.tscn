@@ -226,6 +226,7 @@ anims/Spawn = SubResource( 8 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -28 )
 current = true
+zoom = Vector2( 1.5, 1.5 )
 
 [node name="AttackPosition" type="Position2D" parent="."]
 script = ExtResource( 4 )

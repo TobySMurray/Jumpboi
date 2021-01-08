@@ -9,7 +9,7 @@ var velocity = Vector2()
 var gravity = 800
 var jump_velocity = 250
 
-var max_horiz_speed = 300
+var max_horiz_speed = 250
 
 var max_jumps = 2
 var jumps = 2
@@ -28,11 +28,13 @@ onready var hitAudio = $Hit
 
 func _physics_process(delta):
 	if spawn:
-		move_speed = 0
+		max_horiz_speed = 0
+		jump_velocity = 0
 		anim_player.play("Spawn")
 		yield(anim_player, "animation_finished")
 		spawn = false
-		move_speed = 3
+		max_horiz_speed = 300
+		jump_velocity = 250
 	
 	if level_finished:
 		anim_player.play("Finish")
@@ -56,7 +58,6 @@ func _physics_process(delta):
 		$Sprite.flip_h = false
 	else:
 		$Sprite.flip_h = true
-		
 	velocity = move_and_slide(velocity, UP)
 	
 	if Input.is_action_pressed("reload"):

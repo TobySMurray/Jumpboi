@@ -268,6 +268,8 @@ position = Vector2( -104, -152 )
 [node name="Coin" parent="TileMap2" index="7" instance=ExtResource( 4 )]
 position = Vector2( -80, -64 )
 
+[editable path="Player"]
+
 [editable path="KillZone"]
 
 [editable path="ParallaxBackground"]
