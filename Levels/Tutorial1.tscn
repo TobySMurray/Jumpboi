@@ -9,8 +9,6 @@
 [ext_resource path="res://Scenes/Cursor.tscn" type="PackedScene" id=7]
 [ext_resource path="res://miscellaneous sprites/grass_props.png" type="Texture" id=8]
 
-
-
 [node name="Tutorial1" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
